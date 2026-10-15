@@ -1,0 +1,5 @@
+import React from 'react';
+import { ArrowUpRight, ArrowRight, FileText, Info } from 'lucide-react';
+import './Guidance.css';
+const items=[{country:'GERMANY',title:'Understanding nursing\nrecognition'},{country:'JAPAN',title:'Explore the care-worker\nroute'},{country:'UAE',title:'Check professional\nlicensing'}];
+export default function Guidance(){return <section className="guidance section-wrap" id="guidance"><div className="section-heading"><h2>Know your next step.</h2><a href="#contact">Official guidance <ArrowUpRight size={15}/></a></div><div className="guidance-grid">{items.map(x=><a className="guidance-item" href="#contact" key={x.country}><span className="doc-icon"><FileText size={17}/></span><span className="guidance-copy"><small>{x.country}</small><b>{x.title.split('\n').map((s,i)=><React.Fragment key={s}>{i>0&&<br/>}{s}</React.Fragment>)}</b></span><span className="guidance-arrow"><ArrowRight size={14}/></span></a>)}</div><p className="review-note"><Info size={13} fill="currentColor"/> Official resources · Reviewed 12 Oct 2026</p></section>}

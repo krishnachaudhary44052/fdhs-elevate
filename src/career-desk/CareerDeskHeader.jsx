@@ -1,0 +1,4 @@
+import React,{useState} from 'react';
+import {Menu,X,UserRound,ArrowUpRight} from 'lucide-react';
+import Logo from '../components/Logo.jsx';
+export default function CareerDeskHeader(){const [open,setOpen]=useState(false);return <header className="cd-header" id="top"><div className="cd-header-inner"><Logo/><button className="cd-menu-toggle" aria-label="Toggle navigation" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button><nav className={open?'cd-nav cd-nav-open':'cd-nav'}><a href="/">Home</a><a href="/#destinations">Destinations</a><a href="/#training">Courses</a><a href="/#employers">For Hospitals</a><a className="active" href="/career-desk">Career Desk</a><a href="#contact">Contact</a></nav><div className="cd-account"><a href="#sign-in"><UserRound size={15}/> <span>Sign in</span></a><a className="cd-register" href="/register/">Register <ArrowUpRight size={14}/></a></div></div></header>}

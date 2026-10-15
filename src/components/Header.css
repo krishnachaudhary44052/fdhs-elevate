@@ -1,0 +1,252 @@
+.site-header {
+  height: 58px;
+  background: #fbfaf7;
+  position: relative;
+  z-index: 50;
+  border-bottom: 1px solid #eef0f4;
+}
+
+.header-inner {
+  height: 100%;
+  max-width: 1370px;
+  margin: auto;
+  padding: 0 4.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header-inner .brand-name {
+  font-size: 23px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 58px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #132846;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #1459e9;
+}
+
+.nav a.active {
+  color: #1459e9;
+}
+
+.nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #1459e9;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-shrink: 0;
+}
+
+.header-signin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #132846;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.header-signin:hover {
+  color: #1459e9;
+}
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: #1758e9;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 11px 17px;
+  min-width: 100px;
+  border-radius: 6px;
+  box-shadow: 0 3px 9px #1d5ce91c;
+  transition: transform 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.header-cta:hover,
+.btn:hover {
+  background: #0648d4;
+  transform: translateY(-1px);
+}
+
+.mobile-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: #12294a;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+  .header-inner {
+    padding: 0 3%;
+    gap: 15px;
+  }
+
+  .header-inner .brand-name {
+    font-size: 20px;
+  }
+
+  .nav {
+    gap: 15px;
+  }
+
+  .nav a {
+    font-size: 11px;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .header-cta {
+    padding: 10px 12px;
+    min-width: auto;
+  }
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+  .site-header {
+    height: 58px;
+  }
+
+  .header-inner {
+    position: relative;
+    padding: 0 18px;
+    gap: 12px;
+  }
+
+  .header-inner .brand-name {
+    font-size: 19px;
+  }
+
+  .mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+    margin-left: 0;
+  }
+
+  .header-actions {
+    margin-left: auto;
+    gap: 12px;
+  }
+
+  .header-signin {
+    gap: 0;
+  }
+
+  .header-signin span {
+    display: none;
+  }
+
+  .header-cta {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 12px 18px 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: #fff;
+    border: 1px solid #e7edf5;
+    border-top: 0;
+    box-shadow: 0 10px 20px #0b25451a;
+  }
+
+  .nav.nav-open {
+    display: flex;
+  }
+
+  .nav a {
+    height: auto;
+    min-height: 42px;
+    padding: 12px 4px;
+    font-size: 13px;
+    border-bottom: 1px solid #eef2f7;
+  }
+
+  .nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .nav a.active::after {
+    display: none;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 380px) {
+  .header-inner {
+    padding: 0 10px;
+    gap: 7px;
+  }
+
+  .header-inner .brand-name {
+    font-size: 16px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .header-cta {
+    padding: 8px 9px;
+    font-size: 10px;
+  }
+
+  .mobile-toggle {
+    padding: 4px;
+  }
+}

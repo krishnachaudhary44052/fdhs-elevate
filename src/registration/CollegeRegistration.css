@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.college-registration-page {
+  --college-blue: #1264f5;
+  --college-navy: #09234f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #faf9f6;
+  color: var(--college-navy);
+  font-family: Inter, Arial, sans-serif;
+}
+.college-registration-page * { box-sizing: border-box; }
+.college-registration-page a { -webkit-tap-highlight-color: transparent; }
+
+.college-header { height: 62px; flex: 0 0 62px; background: #fff; border-bottom: 1px solid #eef0f4; }
+.college-header-inner { width: min(100% - 56px, 1370px); height: 100%; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.college-brand { display: inline-flex; align-items: center; gap: 9px; color: #082452; text-decoration: none; white-space: nowrap; font-size: 27px; font-weight: 800; letter-spacing: -1.1px; }
+.college-brand strong { font-weight: 800; }
+.college-brand-mark { position: relative; display: inline-block; width: 42px; height: 40px; flex: 0 0 42px; overflow: hidden; }
+.college-brand-mark span { position: absolute; bottom: 2px; display: block; transform: skewY(-36deg); transform-origin: bottom left; }
+.college-brand-mark span:nth-child(1) { left: 1px; width: 13px; height: 17px; background: #0878ff; }
+.college-brand-mark span:nth-child(2) { left: 13px; width: 16px; height: 29px; background: #1264f5; }
+.college-brand-mark span:nth-child(3) { left: 27px; width: 12px; height: 39px; background: #ff9d20; }
+.college-nav { display: flex; align-items: center; justify-content: center; gap: clamp(15px, 2.5vw, 36px); flex: 1; }
+.college-nav a { color: #09234f; font-size: 13px; font-weight: 500; text-decoration: none; white-space: nowrap; }
+.college-header-actions { display: flex; align-items: center; gap: 26px; white-space: nowrap; }
+.college-signin { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--college-navy); font-size: 13px; }
+.college-register-link { min-width: 126px; height: 42px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; border-radius: 7px; background: var(--college-blue); color: #fff; font-size: 13px; font-weight: 600; text-decoration: none; }
+
+.college-registration-main { flex: 1; display: flex; padding: 0; }
+.college-registration-card { width: 100%; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; background: #fff; }
+.college-hero { position: relative; min-height: 760px; overflow: hidden; background: #153458; }
+.college-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.college-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgb(5 27 55 / 30%) 57%, rgb(5 29 56 / 95%) 100%); }
+.college-hero-copy { position: absolute; left: clamp(30px, 4.5vw, 54px); right: 24px; bottom: clamp(44px, 7.5vh, 88px); color: #fff; }
+.college-hero-copy h2 { margin: 0 0 15px; color: #fff; font-size: clamp(42px, 4.1vw, 65px); font-weight: 800; line-height: .99; letter-spacing: -2.2px; }
+.college-hero-copy p { margin: 0; color: #fff; font-size: clamp(18px, 1.8vw, 27px); line-height: 1.35; letter-spacing: -.45px; }
+
+.college-form-panel { min-width: 0; display: flex; align-items: center; justify-content: center; padding: 34px clamp(28px, 3.8vw, 54px); }
+.college-form-content { width: 100%; max-width: 570px; }
+.college-form-content h1 { margin: 0 0 4px; color: #071f49; font-size: clamp(34px, 3.3vw, 47px); font-weight: 800; line-height: 1.12; letter-spacing: -1.8px; }
+.college-subtitle { margin: 0 0 17px; color: #536b95; font-size: 20px; letter-spacing: -.4px; }
+.college-account-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 22px; }
+.college-account-option { height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border: 1px solid #e0e8f3; border-radius: 9px; background: #f5f8fc; color: #09234f; text-decoration: none; font-size: 16px; font-weight: 600; }
+.college-account-option.is-selected { background: var(--college-blue); color: #fff; border-color: var(--college-blue); box-shadow: 0 4px 10px rgb(18 100 245 / 12%); }
+.college-steps { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 32px; }
+.college-step { display: flex; align-items: center; gap: 12px; color: #65799d; font-size: 14px; white-space: nowrap; }
+.college-step-number { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; flex: 0 0 42px; border: 1px solid #d7e1ef; border-radius: 50%; background: #fff; color: #526a92; font-size: 15px; }
+.college-step.is-current { color: var(--college-blue); font-weight: 600; }
+.college-step.is-current .college-step-number, .college-step.is-complete .college-step-number { background: var(--college-blue); border-color: var(--college-blue); color: #fff; }
+.college-step-line { height: 1px; flex: 1; min-width: 12px; background: #bac8dc; }
+.college-form-title { margin: 0 0 24px; color: #08214d; font-size: 25px; line-height: 1.2; font-weight: 800; letter-spacing: -.7px; }
+.college-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 18px; }
+.college-field { min-width: 0; display: flex; flex-direction: column; gap: 8px; color: #071f49; font-size: 13px; font-weight: 500; }
+.college-field-label { line-height: 1.2; }
+.college-field input, .college-field select, .college-field textarea { width: 100%; min-width: 0; height: 45px; padding: 0 14px; border: 1px solid #d6e0ed; border-radius: 6px; outline: none; background: #fff; color: #17345f; font: 400 13px Inter, Arial, sans-serif; box-shadow: 0 1px 2px rgb(10 30 60 / 3%); }
+.college-field input::placeholder, .college-field textarea::placeholder { color: #8798b5; opacity: 1; }
+.college-field select { color: #8798b5; }
+.college-field select:valid { color: #8798b5; }
+.college-field input:focus, .college-field select:focus, .college-field textarea:focus { border-color: #6ca0ff; box-shadow: 0 0 0 3px rgb(18 100 245 / 9%); }
+.college-field-full { grid-column: 1 / -1; }
+.college-password-wrap { display: block; position: relative; }
+.college-password-wrap input { padding-right: 48px; }
+.college-password-toggle { position: absolute; top: 50%; right: 12px; transform: translateY(-50%); display: flex; padding: 3px; border: 0; background: transparent; color: #385787; cursor: pointer; }
+.college-terms { display: flex; align-items: center; gap: 12px; margin: 23px 0 22px; color: #314b78; font-size: 13px; line-height: 1.4; }
+.college-terms input { width: 22px; height: 22px; flex: 0 0 22px; margin: 0; accent-color: var(--college-blue); }
+.college-terms a { color: #005eff; text-decoration: underline; }
+.college-submit { width: 100%; min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 12px; border: 0; border-radius: 7px; background: var(--college-blue); color: #fff; font: 600 14px Inter, Arial, sans-serif; cursor: pointer; }
+.college-submit:hover { background: #0757df; }
+.college-form-hint { margin: 15px 0 35px; color: #7a8eaf; font-size: 13px; line-height: 1.45; }
+.college-form-bottom { display: flex; justify-content: center; align-items: center; gap: 10px; border-top: 1px solid #d9e1ec; padding-top: 25px; color: #102c58; font-size: 14px; }
+.college-form-bottom a { display: inline-flex; align-items: center; gap: 8px; color: #005eff; text-decoration: none; font-size: 15px; font-weight: 600; }
+.college-notice { margin: 12px 0; padding: 10px 12px; border-radius: 6px; background: #eef5ff; color: #204c8e; font-size: 12px; line-height: 1.5; }
+.college-next-step { min-height: 280px; display: flex; flex-direction: column; gap: 18px; }
+.college-next-step > p { margin: 0; color: #536b95; font-size: 14px; line-height: 1.6; }
+.college-summary { display: grid; grid-template-columns: 125px 1fr; gap: 12px; padding: 17px; border-radius: 8px; background: #f5f8fc; font-size: 13px; }
+.college-summary span { color: #65799d; }
+.college-summary strong { overflow-wrap: anywhere; font-weight: 600; }
+
+.college-footer { min-height: 83px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px max(3.8%, calc((100% - 1370px) / 2)); background: #fff; border-top: 1px solid #f0eee9; }
+.college-footer-brand { font-size: 21px; letter-spacing: -.8px; gap: 6px; }
+.college-footer-brand .college-brand-mark { transform: scale(.85); transform-origin: left center; margin-right: -5px; }
+.college-footer-tagline { margin-left: -4px; color: #17345f; font-size: 12px; white-space: nowrap; }
+.college-footer-nav { display: flex; align-items: center; white-space: nowrap; }
+.college-footer-nav a { padding: 0 13px; border-right: 1px solid #b6c2d4; color: #17345f; text-decoration: none; font-size: 11px; }
+.college-footer-nav a:last-child { border-right: 0; }
+.college-footer-contact { display: flex; flex-direction: column; align-items: flex-end; gap: 7px; white-space: nowrap; }
+.college-footer-contact a { color: #17345f; text-decoration: none; font-size: 11px; }
+.college-footer-contact small { color: #7183a1; font-size: 9px; }
+
+@media (min-width: 1500px) {
+  .college-registration-card { min-height: calc(100vh - 145px); }
+  .college-hero { min-height: calc(100vh - 145px); }
+}
+@media (max-width: 1100px) {
+  .college-header-inner { width: calc(100% - 36px); gap: 16px; }
+  .college-brand { font-size: 22px; }
+  .college-brand-mark { transform: scale(.9); transform-origin: left center; margin-right: -4px; }
+  .college-nav { gap: 15px; }
+  .college-nav a { font-size: 12px; }
+  .college-header-actions { gap: 14px; }
+  .college-register-link { min-width: 105px; }
+  .college-form-panel { padding: 28px 26px; }
+  .college-fields { gap: 16px 12px; }
+  .college-account-option { height: 100px; }
+  .college-account-option svg { width: 33px; height: 33px; }
+  .college-footer { flex-wrap: wrap; }
+}
+@media (max-width: 800px) {
+  .college-header { height: auto; min-height: 62px; }
+  .college-header-inner { min-height: 62px; flex-wrap: wrap; }
+  .college-nav { order: 4; width: 100%; flex-basis: 100%; justify-content: space-between; padding: 0 0 12px; gap: 10px; overflow-x: auto; }
+  .college-nav a { font-size: 11px; }
+  .college-registration-card { grid-template-columns: 1fr; }
+  .college-hero { min-height: 410px; }
+  .college-hero-copy { bottom: 30px; }
+  .college-hero-copy h2 { font-size: clamp(42px, 8vw, 58px); }
+  .college-hero-copy p { font-size: 21px; }
+  .college-form-panel { padding: 34px 7%; }
+  .college-form-content { max-width: 600px; }
+  .college-footer { justify-content: center; }
+  .college-footer-contact { margin-left: auto; }
+  .college-footer-nav { width: 100%; justify-content: center; order: 4; flex-wrap: wrap; row-gap: 12px; }
+}
+@media (max-width: 520px) {
+  .college-header-inner { width: calc(100% - 24px); gap: 10px; }
+  .college-brand { font-size: 20px; }
+  .college-header-actions { margin-left: auto; gap: 10px; }
+  .college-signin { gap: 5px; }
+  .college-signin span { display: none; }
+  .college-register-link { min-width: 88px; height: 37px; gap: 5px; font-size: 12px; }
+  .college-nav { padding-bottom: 10px; }
+  .college-nav a { font-size: 10px; }
+  .college-hero { min-height: 330px; }
+  .college-hero-copy { left: 22px; right: 15px; bottom: 23px; }
+  .college-hero-copy h2 { font-size: 39px; letter-spacing: -1.5px; }
+  .college-hero-copy p { font-size: 17px; }
+  .college-form-panel { padding: 27px 18px; }
+  .college-form-content h1 { font-size: 32px; letter-spacing: -1.2px; }
+  .college-subtitle { font-size: 16px; }
+  .college-account-options { gap: 7px; margin-bottom: 22px; }
+  .college-account-option { height: 90px; gap: 6px; font-size: 13px; }
+  .college-account-option svg { width: 29px; height: 29px; }
+  .college-steps { gap: 7px; margin-bottom: 25px; }
+  .college-step { gap: 6px; font-size: 11px; }
+  .college-step-number { width: 32px; height: 32px; flex-basis: 32px; }
+  .college-step-line { min-width: 7px; }
+  .college-form-title { font-size: 21px; margin-bottom: 20px; }
+  .college-fields { grid-template-columns: 1fr; gap: 15px; }
+  .college-field-full { grid-column: auto; }
+  .college-field input, .college-field select { height: 43px; }
+  .college-terms { align-items: flex-start; margin: 20px 0; font-size: 12px; }
+  .college-terms input { margin-top: 1px; }
+  .college-form-hint { margin: 12px 0 24px; font-size: 12px; }
+  .college-form-bottom { padding-top: 20px; font-size: 12px; }
+  .college-footer { padding: 15px 12px; gap: 10px; }
+  .college-footer-brand { font-size: 17px; }
+  .college-footer-tagline { font-size: 10px; }
+  .college-footer-contact small { font-size: 8px; }
+  .college-footer-nav a { padding: 0 7px; font-size: 10px; }
+}
